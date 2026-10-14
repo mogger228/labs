@@ -6,6 +6,8 @@ def calculate(first: float, second: float, operation: str) -> float:
         return first - second
     if operation == "*":
         return first * second
+    if operation == "^":
+        return first ** second
     if operation == "/":
         if second == 0:
             raise ZeroDivisionError("Деление на ноль")
@@ -16,7 +18,7 @@ def calculate(first: float, second: float, operation: str) -> float:
 def main() -> None:
     """Запрашивает числа и операцию, печатает результат."""
     first = float(input("Первое число: "))
-    operation = input("Операция (+, -, *, /): ")
+    operation = input("Операция (+, -, *, /, ^): ")
     second = float(input("Второе число: "))
     print("Результат:", calculate(first, second, operation))
 
